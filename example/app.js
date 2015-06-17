@@ -1,11 +1,7 @@
-# react-input-switch
-Switch component
-### Installation
-``` sh
-npm install react-input-switch --save
-```
-### Usage
-``` javascript
+var React = require('react');
+var InputSwitch = require('../lib/switch');
+require('../lib/switch.less');
+
 var App = React.createClass({
   getInitialState() {
     return {
@@ -32,4 +28,4 @@ var App = React.createClass({
   }
 });
 
-```
+React.render(<App/>, document.body);

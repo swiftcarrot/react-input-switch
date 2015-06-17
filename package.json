@@ -1,0 +1,35 @@
+{
+  "name": "react-input-switch",
+  "version": "1.0.0",
+  "description": "Switch component",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pqx/react-input-switch.git"
+  },
+  "author": "Wang Zuo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pqx/react-input-switch/issues"
+  },
+  "homepage": "https://github.com/pqx/react-input-switch#readme",
+  "devDependencies": {
+    "babel-core": "^5.5.8",
+    "babel-loader": "^5.1.4",
+    "css-loader": "^0.14.5",
+    "less": "^2.5.1",
+    "less-loader": "^2.2.0",
+    "node-libs-browser": "^0.5.2",
+    "style-loader": "^0.12.3",
+    "webpack": "^1.9.11"
+  },
+  "dependencies": {
+    "classnames": "^2.1.2"
+  },
+  "peerDependencies": {
+    "react": "^0.13.3"
+  }
+}
