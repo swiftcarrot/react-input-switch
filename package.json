@@ -1,6 +1,6 @@
 {
   "name": "react-input-switch",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Switch component",
   "main": "index.js",
   "scripts": {
@@ -32,5 +32,14 @@
   },
   "peerDependencies": {
     "react": "^0.13.3"
-  }
+  },
+  "directories": {
+    "example": "example"
+  },
+  "keywords": [
+    "react-component",
+    "switch",
+    "input",
+    "checkbox"
+  ]
 }

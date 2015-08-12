@@ -1,11 +1,16 @@
 # react-input-switch
 Switch component
+
+### Demo
+[http://pqx.github.io/react-input-switch/example/](http://pqx.github.io/react-input-switch/example/)
 ### Installation
 ``` sh
 npm install react-input-switch --save
 ```
 ### Usage
 ``` javascript
+var InputSwitch = require('react-input-switch');
+
 var App = React.createClass({
   getInitialState() {
     return {
@@ -33,3 +38,5 @@ var App = React.createClass({
 });
 
 ```
+### License
+MIT
