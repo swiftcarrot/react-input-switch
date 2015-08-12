@@ -4,6 +4,7 @@
   "description": "Switch component",
   "main": "index.js",
   "scripts": {
+    "start": "webpack-dev-server -c --port=3000",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -27,7 +28,7 @@
     "webpack": "^1.9.11"
   },
   "dependencies": {
-    "classnames": "^2.1.2"
+    "classnames": "^2.1.3"
   },
   "peerDependencies": {
     "react": "^0.13.3"
