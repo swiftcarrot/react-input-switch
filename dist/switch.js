@@ -19,12 +19,12 @@ module.exports = React.createClass({
           'is-checked': checked
         }, this.props.className) },
       React.createElement('input', {
-        type: "checkbox",
+        type: 'checkbox',
         name: name,
         onClick: this.handleClick
       }),
-      React.createElement('span', { className: "track" }),
-      React.createElement('span', { className: "button" })
+      React.createElement('span', { className: 'track' }),
+      React.createElement('span', { className: 'button' })
     );
   },
 
