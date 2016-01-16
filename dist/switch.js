@@ -1,6 +1,7 @@
 'use strict';
 
 var cx = require('classnames');
+var blacklist = require('blacklist');
 var React = require('react');
 
 module.exports = React.createClass({
@@ -8,29 +9,34 @@ module.exports = React.createClass({
 
   display: 'InputSwitch',
 
+  getDefaultProps: function getDefaultProps() {
+    return {
+      checked: false
+    };
+  },
   render: function render() {
-    var name = this.props.name;
-    var checked = !!this.props.checked;
-    this.checked = checked;
+    var props = blacklist(this.props, 'className', 'checked', 'onChange', 'name');
+    var checked = this.props.checked;
+
+    props.className = cx('u-switch', {
+      'is-checked': checked
+    }, this.props.className);
 
     return React.createElement(
       'label',
-      { className: cx('u-switch', {
-          'is-checked': checked
-        }, this.props.className) },
+      props,
       React.createElement('input', {
         type: 'checkbox',
-        name: name,
+        name: this.props.name,
         onClick: this.handleClick
       }),
       React.createElement('span', { className: 'track' }),
       React.createElement('span', { className: 'button' })
     );
   },
-
   handleClick: function handleClick() {
     if (this.props.onChange) {
-      this.props.onChange(!this.checked);
+      this.props.onChange(!this.props.checked);
     }
   }
 });
