@@ -14,6 +14,8 @@ module.exports = React.createClass({
     return (
       <div>
         <InputSwitch
+          className="input-switch"
+          name="checked"
           checked={this.state.checked}
           onChange={this.handleChange}
         />
