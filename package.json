@@ -25,6 +25,9 @@
     "css-loader": "^0.23.1",
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
+    "react": "^0.14.6",
+    "react-dom": "^0.14.6",
+    "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.11",
     "webpack-dev-server": "^1.14.1"
@@ -36,9 +39,6 @@
   "peerDependencies": {
     "react": "^0.14.0",
     "react-dom": "^0.14.0"
-  },
-  "directories": {
-    "example": "example"
   },
   "keywords": [
     "react-component",

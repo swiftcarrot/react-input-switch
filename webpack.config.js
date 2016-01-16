@@ -1,9 +1,14 @@
+var StaticSiteGeneratorPlugin = require('static-site-generator-webpack-plugin');
+
 module.exports = {
-  entry: './example/app.js',
+  entry: {
+    'bundle': './example/index.js',
+    'styles': './example/styles.js'
+  },
   output: {
-    path: __dirname + '/example',
-    filename: 'bundle.js',
-    publicPath: '/example/',
+    filename: '[name].js',
+    path: __dirname + '/builds',
+    libraryTarget: 'umd'
   },
   module: {
     loaders: [
@@ -12,9 +17,7 @@ module.exports = {
       {test: /\.less$/, loader: 'style-loader!css-loader!less-loader'}
     ]
   },
-  externals: {
-    'react': 'React',
-    'react-dom': 'ReactDOM'
-  },
-  devtool: 'source-map'
+  plugins: [
+    new StaticSiteGeneratorPlugin('bundle', ['/'])
+  ]
 };

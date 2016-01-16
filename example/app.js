@@ -1,8 +1,9 @@
 var React = require('react');
 var InputSwitch = require('../lib/switch');
-require('../lib/switch.less');
 
-var App = React.createClass({
+module.exports = React.createClass({
+  displayName: 'App',
+
   getInitialState() {
     return {
       checked: false
@@ -27,5 +28,3 @@ var App = React.createClass({
     });
   }
 });
-
-React.render(<App/>, document.getElementById('app'));
