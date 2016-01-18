@@ -9,6 +9,9 @@
     "deploy": "npm run build && github-pages-deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "github-pages-deploy": {
+  	"src": "builds"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pqx/react-input-switch.git"

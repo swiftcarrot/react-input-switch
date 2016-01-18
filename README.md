@@ -2,7 +2,7 @@
 Switch component
 
 ### Demo
-[http://pqx.github.io/react-input-switch/example/](http://pqx.github.io/react-input-switch/example/)
+[http://pqx.github.io/react-input-switch](http://pqx.github.io/react-input-switch)
 ### Installation
 ``` sh
 npm install react-input-switch --save
