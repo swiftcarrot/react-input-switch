@@ -4,7 +4,7 @@
   "description": "Switch component",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -c --port=3000",
+    "start": "webpack-dev-server -c --port=8888",
     "build": "make",
     "deploy": "npm run build && github-pages-deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
