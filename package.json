@@ -1,6 +1,6 @@
 {
   "name": "react-input-switch",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Switch component",
   "main": "index.js",
   "scripts": {
