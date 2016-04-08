@@ -31,8 +31,8 @@
     "github-pages-deploy": "0.0.3",
     "less": "^2.5.3",
     "less-loader": "^2.2.2",
-    "react": "^0.14.6",
-    "react-dom": "^0.14.6",
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.11",
@@ -43,8 +43,8 @@
     "classnames": "^2.2.3"
   },
   "peerDependencies": {
-    "react": "^0.14.0",
-    "react-dom": "^0.14.0"
+    "react": "^0.14.0 || ^15.0.0",
+    "react-dom": "^0.14.0 || ^15.0.0"
   },
   "keywords": [
     "react-component",
