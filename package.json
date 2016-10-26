@@ -35,7 +35,7 @@
     "react-dom": "^0.14.6",
     "static-site-generator-webpack-plugin": "^2.0.1",
     "style-loader": "^0.13.0",
-    "webpack": "^1.12.11",
+    "webpack": "^1.13.3",
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
