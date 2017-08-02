@@ -4,13 +4,13 @@
   "description": "Switch component",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server -c --port=8888",
+    "start": "webpack-dev-server --port=8888",
     "build": "make",
     "deploy": "npm run build && github-pages-deploy",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "github-pages-deploy": {
-  	"src": "builds"
+    "src": "builds"
   },
   "repository": {
     "type": "git",
@@ -24,27 +24,31 @@
   "homepage": "https://github.com/pqx/react-input-switch#readme",
   "devDependencies": {
     "babel-core": "^6.4.0",
-    "babel-loader": "^6.2.1",
+    "babel-jest": "^20.0.3",
+    "babel-loader": "^7.1.1",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "css-loader": "^0.23.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.4",
     "github-pages-deploy": "0.0.3",
+    "jest": "^20.0.4",
     "less": "^2.5.3",
-    "less-loader": "^2.2.2",
+    "less-loader": "^4.0.5",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
-    "static-site-generator-webpack-plugin": "^2.0.1",
-    "style-loader": "^0.13.0",
-    "webpack": "^1.12.11",
-    "webpack-dev-server": "^1.14.1"
+    "react-test-renderer": "^15.6.1",
+    "static-site-generator-webpack-plugin": "^3.4.1",
+    "style-loader": "^0.18.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
   },
   "dependencies": {
     "blacklist": "^1.1.2",
     "classnames": "^2.2.3"
   },
   "peerDependencies": {
-    "react": "^0.14.0 || ^15.0.0",
-    "react-dom": "^0.14.0 || ^15.0.0"
+    "react": "^15.0.0",
+    "react-dom": "^15.0.0"
   },
   "keywords": [
     "react-component",

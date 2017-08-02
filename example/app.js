@@ -1,14 +1,16 @@
-var React = require('react');
-var InputSwitch = require('../lib/switch');
+import React, { Component } from 'react';
+import InputSwitch from '../lib/switch';
 
-module.exports = React.createClass({
-  displayName: 'App',
+class App extends Component {
+  state = {
+    checked: false
+  };
 
-  getInitialState() {
-    return {
-      checked: false
-    };
-  },
+  handleChange = checked => {
+    this.setState({
+      checked: checked
+    });
+  };
 
   render() {
     return (
@@ -19,14 +21,12 @@ module.exports = React.createClass({
           checked={this.state.checked}
           onChange={this.handleChange}
         />
-        <div>{this.state.checked ? 'checked' : 'unchecked'}</div>
+        <div>
+          {this.state.checked ? 'checked' : 'unchecked'}
+        </div>
       </div>
     );
-  },
-
-  handleChange(checked) {
-    this.setState({
-      checked: checked
-    });
   }
-});
+}
+
+module.exports = App;
