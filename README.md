@@ -1,14 +1,20 @@
 # react-input-switch
+
 Switch component
 
 ### Demo
+
 [http://pqx.github.io/react-input-switch](http://pqx.github.io/react-input-switch)
+
 ### Installation
-``` sh
+
+```sh
 npm install react-input-switch --save
 ```
+
 ### Usage
-``` javascript
+
+```javascript
 var InputSwitch = require('react-input-switch');
 
 var App = React.createClass({
@@ -36,7 +42,8 @@ var App = React.createClass({
     });
   }
 });
-
 ```
+
 ### License
+
 MIT
