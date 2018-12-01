@@ -1,5 +1,11 @@
 # react-input-switch
 
+[![npm](https://img.shields.io/npm/v/react-input-switch.svg)](https://www.npmjs.com/package/react-input-switch)
+[![npm](https://img.shields.io/npm/dm/react-input-switch.svg)](https://www.npmjs.com/package/react-input-switch)
+[![Build Status](https://travis-ci.org/pqx/react-input-switch.svg?branch=master)](https://travis-ci.org/pqx/react-input-switch)
+[![codecov](https://codecov.io/gh/pqx/react-input-switch/branch/master/graph/badge.svg)](https://codecov.io/gh/pqx/react-input-switch)
+[![styled with prettier](https://img.shields.io/badge/styled_with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+
 Switch component
 
 ### Demo
@@ -10,38 +16,62 @@ Switch component
 
 ```sh
 npm install react-input-switch --save
+yarn add react-input-switch
 ```
 
-### Usage
+### Theming
 
 ```javascript
-var InputSwitch = require('react-input-switch');
+<Switch theme={{ primaryColor: 'blue' }} />
+```
 
-var App = React.createClass({
-  getInitialState() {
-    return {
-      checked: false
-    };
-  },
+### Controlled
+
+```javascript
+import Switch from 'react-input-switch';
+
+class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: 0 };
+  }
 
   render() {
     return (
-      <div>
-        <InputSwitch
-          checked={this.state.checked}
-          onChange={this.handleChange}
-        />
-        <div>{this.state.checked ? 'checked' : 'unchecked'}</div>
-      </div>
+      <Switch
+        value={this.state.value}
+        onChange={value => this.setState({ value })}
+      />
     );
-  },
-
-  handleChange(checked) {
-    this.setState({
-      checked: checked
-    });
   }
-});
+}
+```
+
+#### Custom on/off value
+
+```javascript
+import Switch from 'react-input-switch';
+
+class extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { value: 'yes' };
+  }
+
+  render() {
+    return (
+      <>
+        <Switch
+          value={this.state.value}
+          on="yes"
+          off="no"
+          onChange={value => this.setState({ value })}
+        />
+        {this.state.value}
+      </>
+    );
+  }
+}
 ```
 
 ### License

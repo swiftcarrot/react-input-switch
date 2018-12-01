@@ -2,58 +2,64 @@
   "name": "react-input-switch",
   "version": "1.2.1",
   "description": "Switch component",
-  "main": "index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "start": "webpack-dev-server --port=8888",
-    "build": "make",
-    "deploy": "npm run build && github-pages-deploy",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "github-pages-deploy": {
-    "src": "builds"
+    "build": "rollup -c",
+    "test": "jest --coverage",
+    "prepublishOnly": "npm test && npm run build",
+    "watch": "rollup -cw"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/pqx/react-input-switch.git"
   },
-  "author": "Wang Zuo",
+  "author": "Wang Zuo <wzuoadjusted@gmail.com> (https://wangzuo.me)",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/pqx/react-input-switch/issues"
-  },
-  "homepage": "https://github.com/pqx/react-input-switch#readme",
-  "devDependencies": {
-    "babel-core": "^6.4.0",
-    "babel-jest": "^20.0.3",
-    "babel-loader": "^7.1.1",
-    "babel-preset-es2015": "^6.3.13",
-    "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-0": "^6.24.1",
-    "css-loader": "^0.28.4",
-    "github-pages-deploy": "0.0.3",
-    "jest": "^20.0.4",
-    "less": "^2.5.3",
-    "less-loader": "^4.0.5",
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0",
-    "react-test-renderer": "^15.6.1",
-    "static-site-generator-webpack-plugin": "^3.4.1",
-    "style-loader": "^0.18.2",
-    "webpack": "^3.4.1",
-    "webpack-dev-server": "^2.6.1"
-  },
-  "dependencies": {
-    "blacklist": "^1.1.2",
-    "classnames": "^2.2.3"
-  },
-  "peerDependencies": {
-    "react": "^15.0.0",
-    "react-dom": "^15.0.0"
-  },
   "keywords": [
     "react-component",
     "switch",
     "input",
     "checkbox"
-  ]
+  ],
+  "bugs": {
+    "url": "https://github.com/pqx/react-input-switch/issues"
+  },
+  "homepage": "https://github.com/pqx/react-input-switch#readme",
+  "dependencies": {
+    "@babel/runtime": "^7.1.5",
+    "@emotion/core": "^10.0.0"
+  },
+  "peerDependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.6",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/preset-env": "^7.1.6",
+    "@babel/preset-react": "^7.0.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "jest": "^23.6.0",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "rollup": "^0.67.3",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-node-resolve": "^3.4.0"
+  },
+  "jest": {
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ]
+  }
 }
