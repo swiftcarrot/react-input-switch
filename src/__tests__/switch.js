@@ -81,3 +81,24 @@ test('custom on/off', () => {
   expect(wrap.find(Switch).props().value).toEqual('no');
   expect(wrap.find(App).state().value).toEqual('no');
 });
+
+test('className', () => {
+  const component = renderer.create(<Switch className="test" />);
+  expect(component.toJSON()).toMatchInlineSnapshot(`
+<label
+  className="test css-1m7f95s-Switch"
+  onClick={[Function]}
+>
+  <input
+    type="hidden"
+    value={1}
+  />
+  <span
+    className="test-track css-5qfbhd-Switch"
+  />
+  <span
+    className="test-button css-1x4cdny-Switch"
+  />
+</label>
+`);
+});
