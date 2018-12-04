@@ -58,7 +58,7 @@ class App extends React.Component {
 }
 ```
 
-#### Custom on/off value
+### Custom on/off value
 
 The default on/off value is 1/0 and default value is 1. This component will also render a hidden input with current value and the name prop.
 
