@@ -1,6 +1,6 @@
 {
   "name": "react-input-switch",
-  "version": "2.1.10",
+  "version": "2.1.12",
   "description": "React toggle switch component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -31,21 +31,21 @@
   "homepage": "https://github.com/pqx/react-input-switch#readme",
   "dependencies": {
     "@babel/runtime": "^7.3.4",
-    "@emotion/core": "^10.0.7"
+    "@emotion/core": "^10.0.9"
   },
   "peerDependencies": {
     "react": "^16.6.3",
     "react-dom": "^16.6.3"
   },
   "devDependencies": {
-    "babel-jest": "^24.3.0",
-    "babel-preset-zkit": "^0.2.2",
+    "babel-jest": "^24.4.0",
+    "babel-preset-zkit": "^0.2.4",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "^1.10.0",
-    "jest": "^24.3.0",
+    "jest": "^24.4.0",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
-    "rollup": "^1.5.0",
+    "rollup": "^1.6.0",
     "rollup-plugin-babel": "^4.3.2",
     "rollup-plugin-commonjs": "^9.2.1",
     "rollup-plugin-node-resolve": "^4.0.1"
