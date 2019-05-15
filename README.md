@@ -15,6 +15,10 @@ npm install react-input-switch --save
 yarn add react-input-switch
 ```
 
+### Demo
+
+[https://swiftcarrot.dev/react-input-switch/](https://swiftcarrot.dev/react-input-switch/)
+
 ### Custom styles
 
 ```javascript

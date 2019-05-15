@@ -13,17 +13,17 @@ const Switch = ({
 }) => {
   const checked = value === on;
   const styles = {
-    container: [
-      defaultStyles.container(checked),
-      customStyles.container && customStyles.container(checked)
-    ],
+    container: [defaultStyles.container, customStyles.container],
     track: [
-      defaultStyles.track(checked),
-      customStyles.track && customStyles.track(checked)
+      { ...defaultStyles.track, ...customStyles.track },
+      checked && { ...defaultStyles.trackChecked, ...customStyles.trackChecked }
     ],
     button: [
-      defaultStyles.button(checked),
-      customStyles.button && customStyles.button(checked)
+      { ...defaultStyles.button, ...customStyles.button },
+      checked && {
+        ...defaultStyles.buttonChecked,
+        ...customStyles.buttonChecked
+      }
     ]
   };
 
@@ -52,7 +52,7 @@ Switch.defaultProps = {
 };
 
 const defaultStyles = {
-  container: () => ({
+  container: {
     position: 'relative',
     display: 'inline-block',
     width: 24,
@@ -60,28 +60,37 @@ const defaultStyles = {
     verticalAlign: 'middle',
     cursor: 'pointer',
     userSelect: 'none'
-  }),
+  },
 
-  track: checked => ({
+  track: {
     position: 'absolute',
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
     borderRadius: 7,
-    backgroundColor: checked ? 'blue' : '#cccccc'
-  }),
+    backgroundColor: '#cccccc'
+  },
 
-  button: checked => ({
+  trackChecked: {
+    backgroundColor: '#5e72e4'
+  },
+
+  button: {
     position: 'absolute',
     top: 2,
     bottom: 2,
-    right: checked ? 2 : 11,
-    left: checked ? 11 : 3,
+    right: 11,
+    left: 2,
     backgroundColor: '#fff',
     borderRadius: 9,
     transition: 'all 100ms ease'
-  }),
+  },
+
+  buttonChecked: {
+    right: 2,
+    left: 11
+  },
 
   input: {
     opacity: 0,
