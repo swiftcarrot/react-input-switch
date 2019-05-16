@@ -24,12 +24,18 @@ yarn add react-input-switch
 ```javascript
 <Switch
   styles={{
-    track: checked => ({
-      backgroundColor: checked ? 'red' : 'blue'
-    }),
-    button: checked => ({
-      backgroundColor: checked ? 'blue' : 'yellow'
-    })
+    track: {
+      backgroundColor: 'blue'
+    },
+    trackChecked: {
+      backgroundColor: 'red'
+    },
+    button: {
+      backgroundColor: 'yellow'
+    },
+    buttonChecked: {
+      backgroundColor: 'blue'
+    }
   }}
 />
 ```
