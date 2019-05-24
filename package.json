@@ -1,6 +1,6 @@
 {
   "name": "react-input-switch",
-  "version": "2.1.24",
+  "version": "2.1.25",
   "description": "React toggle switch component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -31,7 +31,7 @@
   },
   "homepage": "https://swiftcarrot.dev/react-input-switch",
   "dependencies": {
-    "@babel/runtime": "^7.4.4",
+    "@babel/runtime": "^7.4.5",
     "@emotion/core": "^10.0.10"
   },
   "peerDependencies": {
@@ -40,16 +40,16 @@
   },
   "devDependencies": {
     "babel-jest": "^24.8.0",
-    "babel-preset-swiftcarrot": "^0.6.2",
+    "babel-preset-swiftcarrot": "^0.7.0",
     "enzyme": "^3.9.0",
-    "enzyme-adapter-react-16": "^1.12.1",
+    "enzyme-adapter-react-16": "^1.13.1",
     "jest": "^24.8.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "rollup": "^1.11.3",
+    "rollup": "^1.12.3",
     "rollup-plugin-babel": "^4.3.2",
-    "rollup-plugin-commonjs": "^9.3.4",
-    "rollup-plugin-node-resolve": "^4.2.3"
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^5.0.0"
   },
   "jest": {
     "collectCoverage": true,
