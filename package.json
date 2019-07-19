@@ -1,6 +1,6 @@
 {
   "name": "react-input-switch",
-  "version": "2.1.25",
+  "version": "2.1.28",
   "description": "React toggle switch component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -11,12 +11,11 @@
   "scripts": {
     "build": "rm -rf dist && NODE_ENV=production rollup -c",
     "test": "jest --coverage",
-    "prepublishOnly": "npm test && npm run build",
-    "watch": "rollup -cw"
+    "prepublishOnly": "npm test && npm run build"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pqx/react-input-switch.git"
+    "url": "git+https://github.com/swiftcarrot/react-input-switch.git"
   },
   "author": "Wang Zuo <wzuoadjusted@gmail.com> (https://wangzuo.me)",
   "license": "MIT",
@@ -27,7 +26,7 @@
     "checkbox"
   ],
   "bugs": {
-    "url": "https://github.com/pqx/react-input-switch/issues"
+    "url": "https://github.com/swiftcarrot/react-input-switch/issues"
   },
   "homepage": "https://swiftcarrot.dev/react-input-switch",
   "dependencies": {

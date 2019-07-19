@@ -50,15 +50,15 @@ test('value', () => {
   expect(wrap.find(App).state().value).toEqual(0);
 });
 
-test('custom on/off', () => {
+test('custom on/off with boolean', () => {
   class App extends Component {
-    state = { value: 'no' };
+    state = { value: false };
 
     render() {
       return (
         <Switch
-          on="yes"
-          off="no"
+          on={true}
+          off={false}
           value={this.state.value}
           onChange={value => this.setState({ value })}
         />
@@ -68,15 +68,15 @@ test('custom on/off', () => {
 
   const wrap = mount(<App />);
 
-  expect(wrap.find(Switch).props().value).toEqual('no');
+  expect(wrap.find(Switch).props().value).toEqual(false);
 
   wrap.find('label').simulate('click');
-  expect(wrap.find(Switch).props().value).toEqual('yes');
-  expect(wrap.find(App).state().value).toEqual('yes');
+  expect(wrap.find(Switch).props().value).toEqual(true);
+  expect(wrap.find(App).state().value).toEqual(true);
 
   wrap.find('label').simulate('click');
-  expect(wrap.find(Switch).props().value).toEqual('no');
-  expect(wrap.find(App).state().value).toEqual('no');
+  expect(wrap.find(Switch).props().value).toEqual(false);
+  expect(wrap.find(App).state().value).toEqual(false);
 });
 
 test('className', () => {
