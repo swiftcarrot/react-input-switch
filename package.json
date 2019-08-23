@@ -1,6 +1,6 @@
 {
   "name": "react-input-switch",
-  "version": "2.1.29",
+  "version": "2.1.30",
   "description": "React toggle switch component",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -17,7 +17,7 @@
     "type": "git",
     "url": "git+https://github.com/swiftcarrot/react-input-switch.git"
   },
-  "author": "Wang Zuo <wzuoadjusted@gmail.com> (https://wangzuo.me)",
+  "author": "Wang Zuo <wangzuo@swiftcarrot.com> (https://swiftcarrot.com)",
   "license": "MIT",
   "keywords": [
     "react-component",

@@ -49,49 +49,32 @@ Also `<Switch className="switch" />` will render:
 </label>
 ```
 
-### Controlled example
+### Controlled example (with hook)
 
 ```javascript
+import React, { useState } from 'react';
 import Switch from 'react-input-switch';
 
-class App extends React.Component {
-  state = { value: 0 };
+const App = () => {
+  const [value, setValue] = useState(0);
 
-  render() {
-    return (
-      <Switch
-        value={this.state.value}
-        onChange={value => this.setState({ value })}
-      />
-    );
-  }
-}
+  return <Switch value={value} onChange={setValue} />;
+};
 ```
 
 ### Custom on/off value
 
-The default on/off value is 1/0 and default value is 1. This component will also render a hidden input with current value and the name prop.
+The default on/off value is 1/0 and default value is 1. This component will also render a hidden input (`<input type="hidden"/>`) with current value and the name prop.
 
 ```javascript
+import React, { useState } from 'react';
 import Switch from 'react-input-switch';
 
-class App extends React.Component {
-  state = { value: 'yes' };
+const App = () => {
+  const [value, setValue] = useState('yes');
 
-  render() {
-    return (
-      <>
-        <Switch
-          value={this.state.value}
-          on="yes"
-          off="no"
-          onChange={value => this.setState({ value })}
-        />
-        {this.state.value}
-      </>
-    );
-  }
-}
+  return <Switch on="yes" off="no" value={value} onChange={setValue} />;
+};
 ```
 
 ### License
