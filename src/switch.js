@@ -2,7 +2,6 @@
 import { jsx } from '@emotion/core';
 
 const Switch = ({
-  className,
   styles: customStyles,
   on,
   off,
@@ -30,16 +29,12 @@ const Switch = ({
   return (
     <label
       {...props}
-      className={className}
       css={styles.container}
       onClick={() => onChange && onChange(checked ? off : on)}
     >
       <input type="hidden" name={name} value={value} />
-      <span className={className && `${className}-track`} css={styles.track} />
-      <span
-        className={className && `${className}-button`}
-        css={styles.button}
-      />
+      <span css={styles.track} />
+      <span css={styles.button} />
     </label>
   );
 };

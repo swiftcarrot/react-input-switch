@@ -40,15 +40,6 @@ yarn add react-input-switch
 />
 ```
 
-Also `<Switch className="switch" />` will render:
-
-```javascript
-<label className="switch">
-  <span className="switch-track" />
-  <span className="switch-button" />
-</label>
-```
-
 ### Controlled example (with hook)
 
 ```javascript

@@ -5,22 +5,22 @@ import Switch from '../switch';
 
 test('render', () => {
   expect(renderer.create(<Switch />).toJSON()).toMatchInlineSnapshot(`
-    <label
-      className="css-1m7f95s-Switch"
-      onClick={[Function]}
-    >
-      <input
-        type="hidden"
-        value={1}
-      />
-      <span
-        className="css-1lmr6io-Switch"
-      />
-      <span
-        className="css-1xb86df-Switch"
-      />
-    </label>
-  `);
+        <label
+          className="css-1m7f95s-Switch"
+          onClick={[Function]}
+        >
+          <input
+            type="hidden"
+            value={1}
+          />
+          <span
+            className="css-1lmr6io-Switch"
+          />
+          <span
+            className="css-1xb86df-Switch"
+          />
+        </label>
+    `);
 });
 
 test('value', () => {
@@ -77,25 +77,4 @@ test('custom on/off with boolean', () => {
   wrap.find('label').simulate('click');
   expect(wrap.find(Switch).props().value).toEqual(false);
   expect(wrap.find(App).state().value).toEqual(false);
-});
-
-test('className', () => {
-  const component = renderer.create(<Switch className="test" />);
-  expect(component.toJSON()).toMatchInlineSnapshot(`
-    <label
-      className="test css-1m7f95s-Switch"
-      onClick={[Function]}
-    >
-      <input
-        type="hidden"
-        value={1}
-      />
-      <span
-        className="test-track css-1lmr6io-Switch"
-      />
-      <span
-        className="test-button css-1xb86df-Switch"
-      />
-    </label>
-  `);
 });
