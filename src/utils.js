@@ -1,17 +1,20 @@
-export const makeStyles = (customStyles, { checked }) => {
+export const makeStyles = customStyles => {
   return {
-    container: [defaultStyles.container, customStyles.container],
-    track: [
-      { ...defaultStyles.track, ...customStyles.track },
-      checked && { ...defaultStyles.trackChecked, ...customStyles.trackChecked }
-    ],
-    button: [
-      { ...defaultStyles.button, ...customStyles.button },
-      checked && {
-        ...defaultStyles.buttonChecked,
-        ...customStyles.buttonChecked
-      }
-    ]
+    container: { ...defaultStyles.container, ...customStyles.container },
+    containerDisabled: {
+      ...defaultStyles.containerDisabled,
+      ...customStyles.containerDisabled
+    },
+    track: { ...defaultStyles.track, ...customStyles.track },
+    trackChecked: {
+      ...defaultStyles.trackChecked,
+      ...customStyles.trackChecked
+    },
+    button: { ...defaultStyles.button, ...customStyles.button },
+    buttonChecked: {
+      ...defaultStyles.buttonChecked,
+      ...customStyles.buttonChecked
+    }
   };
 };
 
@@ -24,6 +27,11 @@ export const defaultStyles = {
     verticalAlign: 'middle',
     cursor: 'pointer',
     userSelect: 'none'
+  },
+
+  containerDisabled: {
+    opacity: 0.7,
+    cursor: 'not-allowed'
   },
 
   track: {
